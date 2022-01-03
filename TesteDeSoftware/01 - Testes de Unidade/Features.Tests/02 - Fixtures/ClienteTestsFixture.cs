@@ -8,8 +8,9 @@ namespace Features.Tests
     public class ClienteCollection : ICollectionFixture<ClienteTestsFixture>
     {}
 
-    public class ClienteTestsFixture : IDisposable
-    {
+    // IDisposable => Por ser reaproveitável entre as outras classes de testes
+    public class ClienteTestsFixture : IDisposable 
+    {        
         public Cliente GerarClienteValido()
         {
             var cliente = new Cliente(
